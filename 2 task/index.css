@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Montserrat:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #E4E5EA;
+  background: #0E1014;
+  font-family: Inter, serif;
+}
+
+h3 {
+  color: #656566;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+[class*="__container"] {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+
+.header {
+  margin-top: 46px;
+  height: 73px;
+}
+
+.header__container {
+
+}
+
+.header__box {
+  margin-top: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+
+.header__logo {
+  height: 24px;
+  width: 140px;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 30px;
+}
+
+.header__nav-item {
+
+}
+
+.header__contacts {
+  display: flex;
+  gap: 47px;
+}
+
+.header__tel {
+
+}
+
+.header__social-list {
+  display: flex;
+  gap: 30px;
+}
+
+.header__social-item {
+  width: 20px;
+  height: 20px;
+}
+
+.header__social-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__text {
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 300;
+}
