@@ -121,11 +121,15 @@ ul {
   .header {
     margin: 0;
     height: auto;
+    background: #0E1014;
+  }
+  .header__box {
+    margin: 0;
   }
   .header__nav {
     justify-content: center;
     text-transform: uppercase;
-    padding: 20px 0;
+    padding: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem) 0;
   }
   .header__nav-item:last-child {
     display: none;
