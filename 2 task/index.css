@@ -16,6 +16,11 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  transition: opacity .5s;
+}
+
+a:hover {
+  opacity: .7;
 }
 
 ul {
