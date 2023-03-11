@@ -521,6 +521,10 @@ ul {
   .footer {
     padding-bottom: 60px;
   }
+  .footer__social-item {
+    width: 24px;
+    height: 24px;
+  }
   .footer__copyrights {
     align-items: flex-start;
   }
