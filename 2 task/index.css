@@ -136,7 +136,7 @@ ul {
 /* Hero */
 
 .hero {
-  padding: 90px 0 70px;
+  padding: clamp(2.5rem, 0.268rem + 11.16vw, 5.625rem) 0 clamp(3.75rem, 3.304rem + 2.23vw, 4.375rem);
 }
 .hero__container {
   display: flex;
@@ -145,7 +145,7 @@ ul {
 .hero__desc {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: clamp(0.938rem, 0.572rem + 1.83vw, 1.875rem);
 }
 .hero__title {
   font-size: 48px;
@@ -191,14 +191,13 @@ ul {
   font-weight: 700;
 }
 .hero__consult-list {
-  margin-top: 40px;
-  display: flex;
+  margin-top: clamp(1.25rem, 0.357rem + 4.46vw, 2.5rem);
+  display: grid;
   gap: 30px;
-  flex-wrap: wrap;
+  grid-template-columns: auto auto;
   max-width: 330px;
 }
 .hero__consult-item {
-  width: calc(50% - 15px);
 }
 .hero__consult-item-title {
   font-weight: 500;
@@ -209,12 +208,30 @@ ul {
   text-transform: uppercase;
 }
 .hero__consult-item-title_mobile {
+  position: relative;
   display: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+.hero__consult-item-title_mobile::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 10px;
+  background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
 }
 .hero__consult-item-text {
   margin-top: 6px;
   line-height: 20px;
   text-align: right;
+  font-family: Montserrat, sans-serif;
 }
 .hero__consult-btn {
   display: inline-block;
@@ -222,3 +239,44 @@ ul {
   padding: 21px 35px;
   background: #4077F3;
 }
+
+@media (max-width: 768px) {
+  .hero__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__desc {
+    width: 100%;
+  }
+  .hero__title {
+    font-size: clamp(2.25rem, 1.714rem + 2.68vw, 3rem);
+    line-height: 44px;
+  }
+  .hero__consult {
+    margin-top: 30px;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .hero__consult-text {
+    text-align: start;
+  }
+  .hero__consult-text span {
+    text-transform: none;
+  }
+  .hero__consult-list {
+    row-gap: 15px;
+    column-gap: 10px;
+    max-width: 300px;
+  }
+  .hero__consult-item-title_mobile {
+    display: block;
+  }
+  .hero__consult-btn,
+  .hero__consult-item-title,
+  .hero__consult-item-text {
+    display: none;
+  }
+}
+
+/* Footer */
+
