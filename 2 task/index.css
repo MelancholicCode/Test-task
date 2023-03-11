@@ -163,6 +163,7 @@ ul {
   font-size: 18px;
   line-height: 22px;
   max-width: 275px;
+  font-family: Montserrat, sans-serif;
 }
 .hero__consult {
   padding-top: 15px;
@@ -245,6 +246,10 @@ ul {
     width: 100%;
   }
   .hero__title {
+    font-size: clamp(2.25rem, 1.714rem + 2.68vw, 3rem);
+    line-height: 44px;
+  }
+  .hero__title span {
     font-size: clamp(2.25rem, 1.714rem + 2.68vw, 3rem);
     line-height: 44px;
   }
