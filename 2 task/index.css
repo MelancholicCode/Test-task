@@ -443,7 +443,7 @@ ul {
 }
 .footer__menu-box {
   display: flex;
-  gap: 25px;
+  gap: clamp(1.563rem, 0.953rem + 3.05vw, 3.125rem);
 }
 .footer__contacts {
   display: flex;
