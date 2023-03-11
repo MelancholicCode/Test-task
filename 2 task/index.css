@@ -12,10 +12,6 @@ body {
   font-family: Inter, serif;
 }
 
-h3 {
-  color: #656566;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -94,7 +90,7 @@ ul {
   font-family: Montserrat, sans-serif;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .header__contacts {
     display: none;
   }
@@ -280,3 +276,133 @@ ul {
 
 /* Footer */
 
+.footer {
+  padding: clamp(2.813rem, 2.569rem + 1.22vw, 3.438rem) 0 20px;
+}
+.footer__container {
+
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  line-height: 19px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer__content-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.875rem, -21.458rem + 38.89vw, 6.25rem);
+}
+.footer__about {
+
+}
+.footer__about-title {
+
+}
+.footer__title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #656566;
+}
+.footer__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__item {
+  line-height: 19px;
+  width: auto;
+}
+.footer__menu {
+}
+.footer__menu-title {
+
+}
+.footer__menu-box {
+  display: flex;
+  gap: 25px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.footer__tel {
+
+}
+.footer__social-list {
+  display: flex;
+  gap: 10px;
+}
+.footer__social-item {
+  
+}
+.footer__social-link {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__social-item img {
+  width: 100%;
+  height: 100%;
+}
+.footer__address {
+  font-style: normal;
+}
+.footer__copyrights {
+  padding-top: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.footer__copyrights-text {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  line-height: 15px;
+}
+.footer__copyrights-link {
+  font-family: 'Montserrat';
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration-line: underline;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    background: #0E1014;
+  }
+  .footer__title {
+    font-size: 12px;
+  }
+  .footer__item {
+    font-size: 14px;
+  }
+  .footer__contacts {
+    align-items: flex-start;
+    gap: 0;
+  }
+  .footer__tel {
+    margin-top: 20px;
+  }
+  .footer__social-list {
+    margin-top: 10px;
+  }
+  .footer__address {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .footer {
+    padding-bottom: 60px;
+  }
+  .footer__copyrights {
+    align-items: flex-start;
+  }
+}
