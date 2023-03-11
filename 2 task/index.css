@@ -10,6 +10,7 @@ body {
   color: #E4E5EA;
   background: #0E1014;
   font-family: Inter, serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -126,7 +127,7 @@ ul {
 }
 
 .main {
-
+  
 }
 
 /* Hero */
@@ -135,8 +136,74 @@ ul {
   padding: clamp(2.5rem, 0.268rem + 11.16vw, 5.625rem) 0 clamp(3.75rem, 3.304rem + 2.23vw, 4.375rem);
 }
 .hero__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
+}
+.bg {
+  display: none;
+}
+.red-light {
+  z-index: -2;
+  position: absolute;
+  top: 42px;
+  left: -249px;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  background: #961A1A;
+  opacity: 0.5;
+  filter: blur(196px);
+}
+.purple-light {
+  z-index: -2;
+  position: absolute;
+  top: -330px;
+  left: 40%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #833AB4;
+  opacity: 0.5;
+  filter: blur(196px);
+}
+.red-ball {
+  z-index: -1;
+  width: 83px;
+  height: 83px;
+  top: -135px;
+  left: 33%;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  backdrop-filter: blur(2px);
+}
+.purple-ball {
+  position: absolute;
+  z-index: -1;
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  top: -210px;
+  right: 30%;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%);
+  box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+  filter: blur(5px);
+  backdrop-filter: blur(2px);
+}
+.mini-ball {
+  z-index: -1;
+  width: 28px;
+  height: 28px;
+  right: 35%;
+  bottom: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  filter: blur(2.5px);
+  backdrop-filter: blur(2px);
 }
 .hero__desc {
   display: flex;
@@ -238,9 +305,51 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .main {
+    position: relative;
+  }
   .hero__container {
     flex-direction: column;
     align-items: center;
+  }
+  .bg {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(238.53% 189.02% at 3.2% 3.49%, rgba(255, 246, 233, 0.1) 0%, rgba(26, 29, 35, 0.1) 26.62%, rgba(26, 29, 35, 0.1) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background-image: url("./img/noise.png");
+    backdrop-filter: blur(7.5px);
+  }
+  .red-light {
+    top: auto;
+    left: -50px;
+    bottom: -100px;
+  }
+  .purple-light {
+    left: auto;
+    top: 70px;
+    right: -210px;
+  }
+  .red-ball {
+    z-index: -3;
+    top: auto;
+    width: 43px;
+    height: 43px;
+    left: 40px;
+    bottom: -20%;
+  }
+  .purple-ball {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    right: -10px;
+  }
+  .mini-ball {
+    display: none;
   }
   .hero__desc {
     width: 100%;
